@@ -11,7 +11,7 @@ import { RecipesComponent } from "./recipes.component";
 
 const routes: Routes = [
     {
-        path: 'recipes', component: RecipesComponent, canActivate: [AuthGuard], children: [
+        path: '', component: RecipesComponent, canActivate: [AuthGuard], children: [
             { path: '', component: NoRecipeItemComponent },
             { path: 'new', component: RecipeEditComponent },
             { path: ':id', component: RecipeDetailComponent, resolve: [RecipesResolverService] },
@@ -24,6 +24,8 @@ const routes: Routes = [
     imports: [
         RouterModule.forChild(routes)
     ],
-    exports: [RouterModule]
+    exports: [
+        RouterModule
+    ]
 })
 export class RecipesRoutingModule { }

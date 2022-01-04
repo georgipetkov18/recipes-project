@@ -23,7 +23,6 @@ import { RecipesComponent } from "./recipes.component";
     ],
     imports: [
         RecipesRoutingModule,
-        AppRoutingModule,
         ReactiveFormsModule,
         SharedModule,
     ]
